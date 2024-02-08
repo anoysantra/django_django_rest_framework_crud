@@ -36,6 +36,8 @@ def add_get_cricketers(request):
         cricketers = Cricketers.objects.all()
         cricketer_serializer = CricketerSerializer(cricketers, many =True)
 
+       #.....to be continued
+
 
 
 
