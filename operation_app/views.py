@@ -18,6 +18,7 @@ def add_get_cricketers(request):
             bowling_record_serializer.is_valid()):
             # Saving the valid data to database
             # Validate the data in all three serializers
+
             cricketer_serializer.save()
             batting_record_serializer.save()
             bowling_record_serializer.save()
@@ -35,6 +36,22 @@ def add_get_cricketers(request):
 
         cricketers = Cricketers.objects.all()
         cricketer_serializer = CricketerSerializer(cricketers, many =True)
+
+        batting_record = Batting_Record.objects.all()
+        batting_record_serializer = BattingSerializer(batting_record, many=True)
+
+        bowling_record = Batting_Record.objects.all()
+        bowling_record_serializer = BowlingSerializer(bowling_record, many=True)
+
+        response_data = {
+            cricketer_serializer,
+            batting_record_serializer,
+            bowling_record_serializer
+        }
+        return Response(response_data,status=status)
+
+
+
 
        #.....to be continued
 
