@@ -9,10 +9,10 @@ class  CricketerSerializer(serializers.ModelSerializer):
 class BattingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Batting_Record
-        fields='__all__'
+        fields=('player','innings_played', 'total_runs','batting_style')
 
 
 class BowlingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bowling_Record
-        fields = '__all__'
+        fields = ('player','innings_bowled','wickets_taken','bowling_style')
