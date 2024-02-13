@@ -1,0 +1,21 @@
+{
+  "cricketer": {
+    "player_id": "P001",
+    "jersey_no": "10",
+    "name": "Rocky Singh",
+    "birthdate": "1990-01-01",
+    "team": "RCB",
+    "total_matches_played": 200
+  },
+  "batting": {
+    "runs_scored": 5000,
+    "innings_played": 150,
+    "total_runs": 6000,
+    "batting_style": "Right-handed"
+  },
+  "bowling": {
+    "innings_bowled": 120,
+    "wickets_taken": 200,
+    "bowling_style": "Medium pace"
+  }
+}

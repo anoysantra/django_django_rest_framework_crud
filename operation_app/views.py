@@ -127,7 +127,13 @@ def update_delete_cricketer(request,player_id):
     cricketer = get_object_or_404(Cricketers,player_id=player_id)
     if request.method == 'POST':
         cricketer_serializer = CricketerSerializer(instance=cricketer , data = request.data)
+
+        old_player_id = cricketer.player_id
+      
         if cricketer_serializer.is_valid():
+            new_player_id = cricketer_serializer.validated_data.get('player_id')
+            if old_player_id != new_player_id:
+                return Response('Player Id cannot be changed while updating',status=status.HTTP_400_BAD_REQUEST)
             cricketer_serializer.save()
             return Response(cricketer_serializer.data , status=status.HTTP_201_CREATED)
         else:
@@ -187,7 +193,7 @@ def manipulate_player_bowling(request, player_id):
     
         
     
-
+#need to make changes for id while updating
 
 
 
