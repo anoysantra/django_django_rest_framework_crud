@@ -84,11 +84,11 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cricketersDB',
-        'USER': 'root',
-        'PASSWORD': 'anoysantra12',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',                  # Change to your MySQL server host
-        'PORT': '3306',                       # Change to your MySQL server port
+        'PORT': '',                       # Change to your MySQL server port
     }
 }
 
