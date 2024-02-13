@@ -6,10 +6,12 @@ urlpatterns = [
 
     path('get_player/',views.get_all_cricketers, name='get_all_players'),
 
-    path('manipulate_bio/<int:player_id>', views.manipulate_player_bio , name= 'manipulate_bio'),
+    path('specific_player/<str:player_id>', views.get_specific_player , name= 'get_specific_player'),
 
-    path('manipulate_player_batting/<int:player_id>',views.manipulate_player_batting, name = 'manipulate_batting'),
+    path('update_delete_cricketer/<str:player_id>',views.update_delete_cricketer, name ='update_delete_cricketer'),
 
-    path('manipulate_player_bowling/<int:player_id>', views.manipulate_player_bowling, name = 'manipulate_bowling')
+    path('get_manipulate_player_batting/<str:player_id>',views.manipulate_player_batting, name = 'get_manipulate_batting'),
+
+    path('get_manipulate_player_bowling/<str:player_id>', views.manipulate_player_bowling, name = 'get_manipulate_bowling')
 
 ]
