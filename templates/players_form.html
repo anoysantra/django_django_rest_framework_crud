@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combined Data Form</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <style>
+      /* Custom CSS */
+      body {
+        background-color: #f8f9fa;
+        color: #343a40;
+      }
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .form-row {
+        margin-bottom: 20px;
+      }
+      label {
+        font-weight: bold;
+      }
+      input[type='text'],
+      input[type='number'],
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 5px;
+      }
+      button[type='submit'] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      button[type='submit']:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2>Combined Data Form</h2>
+      <form method="post">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="player_id">Player ID</label>
+            {{ form.player_id }}
+          </div>
+          <div class="form-group col-md-6">
+            <label for="jersey_no">Jersey Number</label>
+            {{ form.jersey_no }}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Name</label>
+            {{ form.name }}
+          </div>
+          <div class="form-group col-md-6">
+            <label for="birthdate">Birthdate</label>
+            {{ form.birthdate }}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="team">Team</label>
+            {{ form.team }}
+          </div>
+          <div class="form-group col-md-6">
+            <label for="total_matches_played">Total Matches Played</label>
+            {{ form.total_matches_played }}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="innings_played">Innings Played</label>
+            {{ form.innings_played }}
+          </div>
+          <div class="form-group col-md-6">
+            <label for="total_runs">Total Runs</label>
+            {{ form.total_runs }}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="batting_style">Batting Style</label>
+            {{ form.batting_style }}
+          </div>
+          <div class="form-group col-md-6">
+            <label for="innings_bowled">Innings Bowled</label>
+            {{ form.innings_bowled }}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="wickets_taken">Wickets Taken</label>
+            {{ form.wickets_taken }}
+          </div>
+          <div class="form-group col-md-6">
+            <label for="bowling_style">Bowling Style</label>
+            {{ form.bowling_style }}
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
